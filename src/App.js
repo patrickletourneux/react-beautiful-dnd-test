@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Series from "./components/Series";
+// import './App.css';
+import './reset.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header">  
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          test react beautifull dnd
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Series/>
+
     </div>
   );
 }
