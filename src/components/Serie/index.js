@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Position from '../Position'
-import { Container } from 'semantic-ui-react'
 import { Droppable } from 'react-beautiful-dnd'
 
 import './serie.css'; 

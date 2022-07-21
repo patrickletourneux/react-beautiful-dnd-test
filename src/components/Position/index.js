@@ -1,9 +1,10 @@
 // import series from '../../data/series';
 
 import React from 'react';
-import { Container } from 'semantic-ui-react';
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
 
-import './position.css'; 
+// import './position.css'; 
 
 import { Draggable } from 'react-beautiful-dnd'
 
@@ -15,17 +16,24 @@ function Position({position, index}) {
     index={index}
     >
       {(provided)=>(
-        <div 
+        <Card sx={{ maxWidth: 50 , maxHeight: 50}}
           className = "position"
           {...provided.draggableProps}
           {...provided.dragHandleProps}
           ref = {provided.innerRef}
           // innerRef = {provided.innerRef}
         >
-        <p>
+        {/* <p>
         {position.english_name}
-        </p>
-      </div>
+        </p> */}
+        <CardMedia
+          component="img"
+          height= "10%"
+          width="10%"
+          image={position.img_url}
+          alt={position.english_name}
+        />
+      </Card>
     )}
     </Draggable>
     );
