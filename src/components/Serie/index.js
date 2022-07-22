@@ -18,26 +18,19 @@ function Serie({column, positions}) {
       display : 'flex',
       flexDirection :'column',
       width: 100,
-      minHeight: 300,
+      // minHeight: 300,
       margin: theme.spacing(1),
-      backgroundColor: 'blue',
+      backgroundColor: 'primary.main',
+      border : "1px solid black",
       borderRadius : '5px',
       padding :  theme.spacing(2),
       '&:hover': {
-        backgroundColor: 'primary.main.light',
+        backgroundColor: 'secondary.main',
         opacity: [0.9, 0.8, 0.7],
       },
     }}
     >
-      {column.title}
-    <Box 
-      sx = {{
-        backgroundColor: 'purple',
-        minHeight: 200,
-        minWidth: 100,
-      }}
-    >
-    
+      {column.title}   
     <Droppable 
       droppableId={column.id}>
       {(provided) => (
@@ -47,6 +40,16 @@ function Serie({column, positions}) {
         ref={provided.innerRef}
         {...provided.droppableProps}
         >
+        <Box 
+        sx = {{
+        // backgroundColor: 'purple',
+        minHeight: 50,
+        minWidth: 10,
+        border : "1px solid black",
+        borderRadius : '5px',
+        }}
+        >
+          dropzone
         {
           positions.map((position, index) =>(
             <Position
@@ -60,10 +63,10 @@ function Serie({column, positions}) {
         )
         }
         {provided.placeholder}
+      </Box>
       </div>
       )}
     </Droppable>
-    </Box>
     </Box>
     );
 }

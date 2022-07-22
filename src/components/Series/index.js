@@ -87,7 +87,7 @@ function Series(props) {
         p: 2,
         margin: theme.spacing(2, 'auto'),
         display : 'flex', 
-        backgroundColor : 'green'
+        // backgroundColor : 'green'
       }}
     >
         { series.columnOrder.map((columnId)=>{

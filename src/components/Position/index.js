@@ -25,6 +25,8 @@ function Position(props) {
           maxWidth: 50 , 
           maxHeight: 50, 
           margin: theme.spacing(2, 'auto'),
+          border : "1px solid black",
+          borderRadius : '5px',
           // backgroundColor : `${ props => props.isDragging ? 'green': 'white'}`,
           '&:hover': {
             backgroundColor : 'yellow',
