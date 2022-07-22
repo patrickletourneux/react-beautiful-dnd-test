@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import Series from "./components/Series";
 import Typography from '@mui/material/Typography';
 // import './App.css';
@@ -17,9 +18,16 @@ function App() {
         >
           test / react-beautiful-dnd / MUI
         </Typography>
-      
       </header>
-      <Series/>
+      <Routes>
+        <Route
+            exact
+            path=""
+            element={(
+              <Series />
+            )}
+        />
+      </Routes>
     </div>
   );
 }
