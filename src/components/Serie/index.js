@@ -15,9 +15,12 @@ function Serie({column, positions}) {
   return(
     <Box id='serie'
     sx={{
+      display : 'flex',
+      flexDirection :'column',
       width: 100,
-      // height: 300,
-      backgroundColor: 'primary.dark',
+      minHeight: 300,
+      margin: theme.spacing(1),
+      backgroundColor: 'blue',
       borderRadius : '5px',
       padding :  theme.spacing(2),
       '&:hover': {
@@ -26,8 +29,14 @@ function Serie({column, positions}) {
       },
     }}
     >
-    
-    {column.title}
+      {column.title}
+    <Box 
+      sx = {{
+        backgroundColor: 'purple',
+        minHeight: 200,
+        minWidth: 100,
+      }}
+    >
     
     <Droppable 
       droppableId={column.id}>
@@ -54,6 +63,7 @@ function Serie({column, positions}) {
       </div>
       )}
     </Droppable>
+    </Box>
     </Box>
     );
 }

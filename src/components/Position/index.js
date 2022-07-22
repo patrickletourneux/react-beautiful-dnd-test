@@ -10,39 +10,43 @@ import { useTheme } from '@mui/material/styles';
 
 import { Draggable } from 'react-beautiful-dnd'
 
-function Position({position, index}) {
-  console.log('index', index);
+// function Position({position, index}) {
+function Position(props) {
+  console.log('index', props.index);
   const theme = useTheme();
   return(
     <Draggable
-    draggableId={position.id.toString()} 
-    index={index}
+    draggableId={props.position.id.toString()} 
+    index={props.index}
     >
-      {(provided)=>(
+      {(provided, snapshot)=>(
         <Card 
         sx={{ 
           maxWidth: 50 , 
           maxHeight: 50, 
           margin: theme.spacing(2, 'auto'),
+          // backgroundColor : `${ props => props.isDragging ? 'green': 'white'}`,
           '&:hover': {
-            border : '2px solid black',
+            backgroundColor : 'yellow',
           },
+        
         }}
         className = "position"
           {...provided.draggableProps}
           {...provided.dragHandleProps}
           ref = {provided.innerRef}
+          // isDragging = {snapshot.isDragging}
           // innerRef = {provided.innerRef}
         >
         <Typography sx={{ fontSize: 8 }} >
-          {position.english_name}
+          {props.position.english_name}
         </Typography>
         <CardMedia
           component="img"
           height= "40"
           // width="5%"
-          image={position.img_url}
-          alt={position.english_name}
+          image={props.position.img_url}
+          alt={props.position.english_name}
         />
       </Card>
     )}

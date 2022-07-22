@@ -54,8 +54,18 @@ const data = {
             title : 'serie-1-title',
             positions : ['position-1','position-2','position-3','position-4','position-5']
         },
+        'serie-2': {
+          id: 'serie-2',
+          title : 'serie-2-title',
+          positions : []
+        },
+        'serie-3': {
+          id: 'serie-3',
+          title : 'serie-3-title',
+          positions : []
+        },
     },
-    columnOrder : ['serie-1']
+    columnOrder : ['serie-1','serie-2','serie-3']
 };
 
 export default data;

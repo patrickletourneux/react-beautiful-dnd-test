@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">  
         <p>
-          test react beautifull dnd
+          test / react beautifull dnd / MUI
         </p>
       </header>
       <Series/>
