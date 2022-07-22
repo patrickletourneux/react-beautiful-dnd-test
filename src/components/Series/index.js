@@ -25,6 +25,28 @@ function Series(props) {
     const startColumn = series.columns[source.droppableId];
     const finishColumn = series.columns[destination.droppableId];
 
+     // moving in trash column
+     if (destination.droppableId === 'trash'){
+      const newPositions = Array.from(startColumn.positions)
+      newPositions.splice(source.index, 1);
+  
+      const newColumn = {
+        ...startColumn,
+        positions : newPositions,
+      }
+      console.log('TOTOTO')
+      const newSeries = {
+        ...series,
+        columns : {
+          ...series.columns,
+          [newColumn.id]: newColumn
+        }
+      }
+      console.log('newSeries ',newSeries)
+      setSeries(newSeries);
+      return;
+    }
+    // start === finish
     if (startColumn === finishColumn){
       const newPositions = Array.from(startColumn.positions)
       newPositions.splice(source.index, 1);
@@ -45,7 +67,9 @@ function Series(props) {
       console.log('newSeries ',newSeries)
       setSeries(newSeries);
       return;
-    }  
+    }
+   
+
     // moving in another column
     const startPositions = Array.from(startColumn.positions)
     startPositions.splice(source.index, 1);

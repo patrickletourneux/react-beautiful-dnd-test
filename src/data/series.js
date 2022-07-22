@@ -101,8 +101,13 @@ const data = {
           title : 'serie-3-title',
           positions : []
         },
+        'trash': {
+          id: 'trash',
+          title : 'trash',
+          positions : []
+        },
     },
-    columnOrder : ['serie-1','serie-2','serie-3']
+    columnOrder : ['serie-1','serie-2','serie-3','trash']
 };
 
 export default data;
