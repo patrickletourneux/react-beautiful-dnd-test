@@ -3,17 +3,32 @@
 import React from 'react';
 import Position from '../Position'
 import { Droppable } from 'react-beautiful-dnd'
+import Box from '@mui/material/Box';
+import { useTheme } from '@mui/material/styles';
 
-import './serie.css'; 
+// import './serie.css'; 
 
 
 function Serie({column, positions}) {
+  const theme = useTheme();
   // console.log(series);
   return(
-    <div id='serie'>
-    <p>
+    <Box id='serie'
+    sx={{
+      width: 100,
+      // height: 300,
+      backgroundColor: 'primary.dark',
+      borderRadius : '5px',
+      padding :  theme.spacing(2),
+      '&:hover': {
+        backgroundColor: 'primary.main.light',
+        opacity: [0.9, 0.8, 0.7],
+      },
+    }}
+    >
+    
     {column.title}
-    </p>
+    
     <Droppable 
       droppableId={column.id}>
       {(provided) => (
@@ -39,7 +54,7 @@ function Serie({column, positions}) {
       </div>
       )}
     </Droppable>
-    </div>
+    </Box>
     );
 }
 

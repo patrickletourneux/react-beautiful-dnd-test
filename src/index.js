@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { ThemeProvider } from '@mui/material';
+import theme from './themeMUI';
+
+
 // import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // need to remove strict mode to use dnd
   // <React.StrictMode>
+  <ThemeProvider theme={theme}>
     <App />
+  </ThemeProvider>
   // </React.StrictMode>
 );
 
