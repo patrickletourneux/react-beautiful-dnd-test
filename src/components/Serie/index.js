@@ -4,6 +4,9 @@ import React from 'react';
 import Position from '../Position'
 import { Droppable } from 'react-beautiful-dnd'
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { useTheme } from '@mui/material/styles';
 
 // import './serie.css'; 
@@ -30,7 +33,18 @@ function Serie({column, positions}) {
       },
     }}
     >
-      {column.title}   
+      <Typography 
+          // variant="h5"
+          sx={{       
+            textAlign : 'center',
+            marginBottom :'1rem',
+            fontFamily: 'Arial',  
+            fontWeight :'bold',
+          }}
+        >
+      {column.title !== 'trash' ? column.title : <DeleteOutlinedIcon sx={{ fontSize: 20 }} />}
+      </Typography>
+   
     <Droppable 
       droppableId={column.id}>
       {(provided) => (
@@ -50,7 +64,16 @@ function Serie({column, positions}) {
         backgroundColor : `${column.id === 'trash' ? 'orange' : 'white'}`
         }}
         >
+        {/* <Typography 
+          // variant="h5"
+          sx={{       
+            textAlign : 'center',
+            margin :'auto',
+            fontFamily: 'Arial',  
+          }}
+        >
           drop
+        </Typography> */}
         {
           positions.map((position, index) =>(
             <Position

@@ -2,6 +2,7 @@ import data from '../../data/series';
 import React , {useState } from 'react';
 import Serie from '../Serie';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 
 import { DragDropContext } from 'react-beautiful-dnd';

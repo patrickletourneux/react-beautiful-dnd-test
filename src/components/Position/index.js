@@ -41,7 +41,13 @@ function Position(props) {
           // isDragging = {snapshot.isDragging}
           // innerRef = {provided.innerRef}
         >
-        <Typography sx={{ fontSize: 8 }} >
+        <Typography sx=
+          {{
+            textAlign : 'center',
+            fontSize: 8,
+            fontWeight :'bold',
+          }}
+        >
           {props.position.english_name}
         </Typography>
         <CardMedia

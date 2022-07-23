@@ -87,18 +87,18 @@ const data = {
     columns :{
         'serie-1': {
             id: 'serie-1',
-            title : 'serie-1',
+            title : 'S-1',
             positions : ['position-1','position-2','position-3',
                 'position-4','position-5','position-6','position-7','position-8','position-9']
         },
         'serie-2': {
           id: 'serie-2',
-          title : 'serie-2',
+          title : 'S-2',
           positions : []
         },
         'serie-3': {
           id: 'serie-3',
-          title : 'serie-3',
+          title : 'S-3',
           positions : []
         },
         'trash': {

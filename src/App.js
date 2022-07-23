@@ -11,16 +11,18 @@ function App() {
         <Typography 
           variant="h5"
           sx={{    
-            border : "1px solid black",
-            borderRadius : '5px',     
+            // border : "1px solid black",
+            // borderRadius : '5px',     
             textAlign : 'center',
             maxWidth : "400px",
             margin :'auto',
+            marginTop : '2rem',
+            marginBottom : '2rem',
             fontFamily: 'Arial',  
             fontWeight :'bold',
           }}
         >
-          test / react-beautiful-dnd / MUI
+          react-beautiful-dnd - MUI
         </Typography>
       </header>
       <Routes>
