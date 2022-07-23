@@ -13,7 +13,11 @@ function App() {
           sx={{    
             border : "1px solid black",
             borderRadius : '5px',     
-            textAlign : 'center'     
+            textAlign : 'center',
+            maxWidth : "400px",
+            margin :'auto',
+            fontFamily: 'Arial',  
+            fontWeight :'bold',
           }}
         >
           test / react-beautiful-dnd / MUI

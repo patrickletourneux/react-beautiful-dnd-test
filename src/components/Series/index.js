@@ -25,8 +25,13 @@ function Series(props) {
     const startColumn = series.columns[source.droppableId];
     const finishColumn = series.columns[destination.droppableId];
 
+    // avoid tu drop data on serie-1
+    // if (destination.droppableId === 'serie-1'){
+    //   return
+    // }
+
      // moving in trash column
-     if (destination.droppableId === 'trash'){
+    if (destination.droppableId === 'trash'){
       const newPositions = Array.from(startColumn.positions)
       newPositions.splice(source.index, 1);
   
@@ -34,7 +39,6 @@ function Series(props) {
         ...startColumn,
         positions : newPositions,
       }
-      console.log('TOTOTO')
       const newSeries = {
         ...series,
         columns : {
@@ -56,7 +60,6 @@ function Series(props) {
         ...startColumn,
         positions : newPositions,
       }
-      console.log('TOTOTO')
       const newSeries = {
         ...series,
         columns : {
@@ -94,7 +97,7 @@ function Series(props) {
         [newFinishColumn.id]: newFinishColumn,
       }
     }
-    console.log(newSeries)
+    console.log('newSeries ',newSeries)
     setSeries(newSeries);
 
   }
@@ -111,11 +114,12 @@ function Series(props) {
         p: 2,
         margin: theme.spacing(2, 'auto'),
         display : 'flex', 
+        justifyContent : 'center'
         // backgroundColor : 'green'
       }}
     >
         { series.columnOrder.map((columnId)=>{
-          console.log('columnId ',columnId);
+          // console.log('columnId ',columnId);
           const column = series.columns[columnId];
           const positions = column.positions.map(positionId => series.positions[positionId])
           return (

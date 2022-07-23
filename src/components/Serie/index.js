@@ -26,7 +26,7 @@ function Serie({column, positions}) {
       padding :  theme.spacing(2),
       '&:hover': {
         backgroundColor: 'secondary.main',
-        opacity: [0.9, 0.8, 0.7],
+        // opacity: [0.9, 0.8, 0.7],
       },
     }}
     >
@@ -47,7 +47,7 @@ function Serie({column, positions}) {
         minWidth: 10,
         border : "1px solid black",
         borderRadius : '5px',
-        backgroundColor : `${column.id === 'trash' && 'red'}`
+        backgroundColor : `${column.id === 'trash' ? 'orange' : 'white'}`
         }}
         >
           dropzone

@@ -4,6 +4,9 @@ const theme = createTheme({
     status: {
       danger: '#fff',
     },
+    typography: {
+      fontFamily: 'Arial',
+    },
     palette: {
         primary: {
           main: '#ccc',

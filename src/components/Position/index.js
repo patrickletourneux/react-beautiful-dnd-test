@@ -12,7 +12,7 @@ import { Draggable } from 'react-beautiful-dnd'
 
 // function Position({position, index}) {
 function Position(props) {
-  console.log('index', props.index);
+  // console.log('index', props.index);
   const theme = useTheme();
   return(
     <Draggable
@@ -29,8 +29,9 @@ function Position(props) {
           borderRadius : '5px',
           // backgroundColor : `${ props => props.isDragging ? 'green': 'white'}`,
           '&:hover': {
-            backgroundColor : 'yellow',
+            backgroundColor : 'primary.main',
           },
+
         
         }}
         className = "position"
