@@ -17,7 +17,7 @@ function Serie({column, positions}) {
     sx={{
       display : 'flex',
       flexDirection :'column',
-      width: 100,
+      width: 70,
       // minHeight: 300,
       margin: theme.spacing(1),
       backgroundColor: 'primary.main',
