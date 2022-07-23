@@ -17,7 +17,7 @@ function Serie({column, positions}) {
     sx={{
       display : 'flex',
       flexDirection :'column',
-      width: 70,
+      width: 50,
       // minHeight: 300,
       margin: theme.spacing(1),
       backgroundColor: 'primary.main',
@@ -50,7 +50,7 @@ function Serie({column, positions}) {
         backgroundColor : `${column.id === 'trash' ? 'orange' : 'white'}`
         }}
         >
-          dropzone
+          drop
         {
           positions.map((position, index) =>(
             <Position
