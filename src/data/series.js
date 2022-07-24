@@ -85,19 +85,19 @@ const data = {
       },
       
     columns :{
-        'serie-1': {
-            id: 'serie-1',
+        'S-1': {
+            id: 'S-1',
             title : 'S-1',
             positions : ['position-1','position-2','position-3',
                 'position-4','position-5','position-6','position-7','position-8','position-9']
         },
-        'serie-2': {
-          id: 'serie-2',
+        'S-2': {
+          id: 'S-2',
           title : 'S-2',
           positions : []
         },
-        'serie-3': {
-          id: 'serie-3',
+        'S-3': {
+          id: 'S-3',
           title : 'S-3',
           positions : []
         },
@@ -107,7 +107,7 @@ const data = {
           positions : []
         },
     },
-    columnOrder : ['serie-1','serie-2','serie-3','trash']
+    columnOrder : ['S-1','S-2','S-3','trash']
 };
 
 export default data;
